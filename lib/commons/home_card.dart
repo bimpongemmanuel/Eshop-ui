@@ -1,7 +1,4 @@
 
-  import 'dart:js';
-
-import 'package:ecommerce_shop/Details_screens/womenbag_details.dart';
 import 'package:flutter/material.dart';
 
 Row homeCard2() {
@@ -23,7 +20,7 @@ Row homeCard2() {
                               image: DecorationImage(image: NetworkImage('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/t-shirt-design-template-096cfcbec61b2c43440782c3ae447f47_screen.jpg?ts=1612183823'),fit: BoxFit.cover)
                             ),
                           ),
-                          const Text('Desing T-Shirt',textAlign: TextAlign.center,),
+                          const Text('Desgin T-Shirt',textAlign: TextAlign.center,),
                           const Text('GHC 70'),
                         ],
                       ),

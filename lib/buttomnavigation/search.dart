@@ -19,13 +19,13 @@ class SearchPage extends StatelessWidget {
       backgroundColor: const Color(0xE1E43C08),
       automaticallyImplyLeading: false,
      title:Padding(
-       padding:  EdgeInsets.fromLTRB(8,8,8,0),
+       padding:  EdgeInsets.fromLTRB(10,10,10,0),
        child: TextField(
+        cursorColor: Colors.grey,
         decoration: InputDecoration(
           hintText: 'search',
-          border: outlinedInputBorder,
-          focusedBorder: outlinedInputBorder,
-          prefixIcon: Icon(Icons.search),
+          hintStyle: TextStyle(color: Colors.white),
+          prefixIcon: Icon(Icons.search,color: Colors.grey,),
           prefixIconColor: Colors.white,
           ),
        ),
@@ -67,7 +67,7 @@ class SearchPage extends StatelessWidget {
               image:DecorationImage(image: NetworkImage('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c25lYWtlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'),fit: BoxFit.cover)
             )
            ),
-           SizedBox(height: 10,),
+           SizedBox(height: 10,), 
            Text('Sneaker'),
            SizedBox(height: 5,),
            Text('GHC 120.00'),

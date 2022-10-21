@@ -105,7 +105,7 @@ class ProductCard extends StatelessWidget {
      width:120,
      child: Card(                 
        child: Container(decoration: BoxDecoration(
-        image: DecorationImage(image: NetworkImage(allProducts!.images![1])
+        image: DecorationImage(image: NetworkImage(allProducts!.category!.image!)
        )),
      )));
   }

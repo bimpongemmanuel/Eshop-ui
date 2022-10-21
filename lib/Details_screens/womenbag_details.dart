@@ -3,7 +3,7 @@ import 'package:ecommerce_shop/Details_screens/details2.dart';
 import 'package:ecommerce_shop/buttomnavigation/navbar.dart';
 import 'package:ecommerce_shop/model.dart';
 import 'package:ecommerce_shop/screen/carousel_dot.dart';
-import 'package:ecommerce_shop/screen/homepage.dart';
+import 'package:ecommerce_shop/buttomnavigation/homepage.dart';
 import 'package:flutter/material.dart';
 
 class WomenBags extends StatelessWidget {
@@ -34,7 +34,7 @@ class WomenBags extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(allProducts!.price.toString(),style: TextStyle(fontWeight: FontWeight.bold,color:const Color(0xE1E43C08) ),),
+              Text("GHC 120",style: TextStyle(fontWeight: FontWeight.bold,color:const Color(0xE1E43C08) ),),
               Row(
                 children: [
                   Icon(Icons.star,color: const Color(0xE1E43C08),),

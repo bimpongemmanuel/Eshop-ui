@@ -90,26 +90,10 @@ class DetailsPage extends StatelessWidget {
             Text('Women\'s Bag',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
             
             SizedBox(height: 20,),
-            Row(
-              children: [
-                Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(backgroundColor:const Color(0xE1E43C08)),
-                    onPressed: (){},
-                   child: Text('Add to Cart',style: TextStyle(color: Colors.white),)),
-                ),
-                SizedBox(width: 10,),
-
-                  Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(backgroundColor:const Color(0xE1E43C08)),
-                    onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => CheckOut()));
-                    },
-                   child: Text('Buy Now',style: TextStyle(color: Colors.white),)),
-                )
-              ],
-            )
+            TextButton(
+              style: TextButton.styleFrom(backgroundColor:const Color(0xE1E43C08)),
+              onPressed: (){},
+             child: Center(child: Text('Add to Cart',style: TextStyle(color: Colors.white),)))
         ],
         ),
       ),

@@ -12,7 +12,7 @@ class HandBag extends StatefulWidget {
 
 class _HandBagState extends State<HandBag> {
 
-  final  _currentPageIndex = 0.0;
+  int _currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,12 +45,17 @@ class _HandBagState extends State<HandBag> {
           enableInfiniteScroll: true,
           autoPlayAnimationDuration:const Duration(milliseconds: 800),
           viewportFraction: 1,
+          onPageChanged:(index,reason){
+            setState(() {
+              _currentPageIndex=index;
+            });
+          }
    )),
    DotsIndicator(
-    position: _currentPageIndex,
+    position: _currentPageIndex.toDouble(),
     dotsCount: items.length,
     decorator: DotsDecorator(
-      activeColor: const Color(0xE1E43C08),
+      activeColor: _currentPageIndex==items[_currentPageIndex] ? Colors.black:const Color(0xE1E43C08),
       activeSize:const Size.fromRadius(10),
       activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
        ),),

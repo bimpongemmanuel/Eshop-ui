@@ -1,7 +1,7 @@
 import 'package:ecommerce_shop/buttomnavigation/category.dart';
 import 'package:ecommerce_shop/buttomnavigation/search.dart';
-import 'package:ecommerce_shop/screen/homepage.dart';
-import 'package:ecommerce_shop/screen/profile.dart';
+import 'package:ecommerce_shop/buttomnavigation/homepage.dart';
+import 'package:ecommerce_shop/buttomnavigation/profile.dart';
 import 'package:flutter/material.dart';
 
 class MyNav extends StatefulWidget {

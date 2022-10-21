@@ -1,5 +1,5 @@
 import 'package:ecommerce_shop/buttomnavigation/navbar.dart';
-import 'package:ecommerce_shop/screen/homepage.dart';
+import 'package:ecommerce_shop/buttomnavigation/homepage.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {

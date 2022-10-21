@@ -1,9 +1,13 @@
+import 'package:ecommerce_shop/commons/list_api.dart';
+import 'package:ecommerce_shop/model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class CategoryScreen extends StatelessWidget {
-  const CategoryScreen({Key? key}) : super(key: key);
+ CategoryScreen({Key? key,this.allProducts}) : super(key: key);
+
+    EShopModel? allProducts;
 
   @override
   Widget build(BuildContext context) {
@@ -23,151 +27,36 @@ class CategoryScreen extends StatelessWidget {
     body: Column(
       children: [
         Expanded(
-          child: GridView.count(crossAxisCount: 3,
-          crossAxisSpacing: 5,
-          mainAxisSpacing: 5,
-          children: [          
-              SizedBox(
-                  height: 150,
-                  width: 120,
-                  child: Card(
-                    child: Container(
-                       height: 120,
-                       width: 100,                  
-                       decoration: BoxDecoration(
-                           color: Colors.amber,
-                        image: DecorationImage(image: NetworkImage('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'))
-                       ),
-                       child:  Text('data',textAlign: TextAlign.center,),
+          child: GridView.builder(
+             itemCount:homeCard.length, 
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          itemBuilder: (context, index) {
+            return
+          SizedBox(
+            height: 180,
+            width: 150,
+            child: GestureDetector(
+              child: Card(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 120,                
+                      decoration: BoxDecoration(
+                      image: DecorationImage(image: NetworkImage(homeCard[index]['img']),fit: BoxFit.cover),
+                      ),
                     ),
-                  ),
-                ),
-                 SizedBox(
-                  height: 150,
-                  width: 120,
-                  child: Card(
-                    child: Container(
-                       height: 120,
-                       width: 100,                  
-                       decoration: BoxDecoration(
-                           color: Colors.amber,
-                        image: DecorationImage(image: NetworkImage('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'))
-                       ),
-                       child:  Text('data',textAlign: TextAlign.center,),
-                    ),
-                  ),
-                ),
-                 SizedBox(
-                  height: 150,
-                  width: 120,
-                  child: Card(
-                    child: Container(
-                       height: 120,
-                       width: 100,                  
-                       decoration: BoxDecoration(
-                           color: Colors.amber,
-                        image: DecorationImage(image: NetworkImage('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'))
-                       ),
-                       child:  Text('data',textAlign: TextAlign.center,),
-                    ),
-                  ),
-                ),
-                 SizedBox(
-                  height: 150,
-                  width: 120,
-                  child: Card(
-                    child: Container(
-                       height: 120,
-                       width: 100,                  
-                       decoration: BoxDecoration(
-                           color: Colors.amber,
-                        image: DecorationImage(image: NetworkImage('https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'))
-                       ),
-                       child:  Text('data',textAlign: TextAlign.center,),
-                    ),
-                  ),
-                ),
-                 SizedBox(
-                  height: 150,
-                  width: 120,
-                  child: Card(
-                    child: Container(
-                       height: 120,
-                       width: 100,                  
-                       decoration: BoxDecoration(
-                           color: Colors.amber,
-                        image: DecorationImage(image: NetworkImage('https://sneakersinc.co.za/wp-content/uploads/2022/04/P1-5-scaled.jpg'))
-                       ),
-                       child:  Text('data',textAlign: TextAlign.center,),
-                    ),
-                  ),
-                ),
-                 SizedBox(
-                  height: 150,
-                  width: 120,
-                  child: Card(
-                    child: Container(
-                       height: 120,
-                       width: 100,                  
-                       decoration: BoxDecoration(
-                           color: Colors.amber,
-                        image: DecorationImage(image: NetworkImage('https://sneakersinc.co.za/wp-content/uploads/2022/04/P1-5-scaled.jpg'))
-                       ),
-                       child:  Text('data',textAlign: TextAlign.center,),
-                    ),
-                  ),
-                ),
-                 SizedBox(
-                  height: 150,
-                  width: 120,
-                  child: Card(
-                    child: Container(
-                       height: 120,
-                       width: 100,                  
-                       decoration: BoxDecoration(
-                           color: Colors.amber,
-                        image: DecorationImage(image: NetworkImage('https://sneakersinc.co.za/wp-content/uploads/2022/04/P1-5-scaled.jpg'))
-                       ),
-                       child:  Text('data',textAlign: TextAlign.center,),
-                    ),
-                  ),
-                ),
-                 SizedBox(
-                  height: 150,
-                  width: 120,
-                  child: Card(
-                    child: Container(
-                       height: 120,
-                       width: 100,                  
-                       decoration: BoxDecoration(
-                           color: Colors.amber,
-                        image: DecorationImage(image: NetworkImage('https://sneakersinc.co.za/wp-content/uploads/2022/04/P1-5-scaled.jpg'))
-                       ),
-                       child:  Text('data',textAlign: TextAlign.center,),
-                    ),
-                  ),
-                ),
-                 SizedBox(
-                  height: 150,
-                  width: 120,
-                  child: Card(
-                    child: Container(
-                       height: 120,
-                       width: 100,                  
-                       decoration: BoxDecoration(
-                           color: Colors.amber,
-                        image: DecorationImage(image: NetworkImage('https://sneakersinc.co.za/wp-content/uploads/2022/04/P1-5-scaled.jpg'))
-                       ),
-                       child:  Text('data',textAlign: TextAlign.center,),
-                    ),
-                  ),
-                ),
-                
+                    SizedBox(height: 10,),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(homeCard[index]['descrition'],style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
+                    )
+                ]),
+              ),
               
-            
-           
-          ],
-          ),
+            ));
+          },),
         )
       ],
     ),
