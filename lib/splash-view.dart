@@ -1,5 +1,5 @@
+// ignore: file_names
 import 'dart:async';
-
 import 'package:ecommerce_shop/onboardingscreen/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,10 +20,10 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: textColor(),
-      body:Center(child: Text('MShop',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.white),),)
+      body:const Center(child: Text('MShop',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.white),),)
     );
   }
 
-  Color textColor() => Color(0xE1E43C08);
+  Color textColor() => const Color(0xE1E43C08);
 }
   

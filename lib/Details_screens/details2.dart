@@ -1,4 +1,3 @@
-import 'package:ecommerce_shop/Details_screens/checkout.dart';
 import 'package:ecommerce_shop/Details_screens/womenbag_details.dart';
 import 'package:ecommerce_shop/screen/carousel_dot.dart';
 import 'package:flutter/material.dart';
@@ -13,48 +12,49 @@ class DetailsPage extends StatelessWidget {
         backgroundColor: const Color(0xE1E43C08),
         elevation: 0,
         leading: IconButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => WomenBags()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const WomenBags()));
         },
-         icon:Icon(Icons.arrow_back_ios,color: Colors.white,)),
+         icon:const Icon(Icons.arrow_back_ios,color: Colors.white,)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 200   ,   child: HandBag()),
+          const SizedBox(height: 200   , 
+            child:  HandBag()),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('GHC 120',style: TextStyle(fontWeight: FontWeight.bold,color:const Color(0xE1E43C08) ),),
+              const Text('GHC 120',style: TextStyle(fontWeight: FontWeight.bold,color:Color(0xE1E43C08) ),),
               Row(
-                children: [
-                  Icon(Icons.star,color: const Color(0xE1E43C08),),
-                  Icon(Icons.star,color: const Color(0xE1E43C08),),
-                  Icon(Icons.star,color: const Color(0xE1E43C08),),
-                  Icon(Icons.star,color: const Color(0xE1E43C08),),
+                children: const [
+                  Icon(Icons.star,color: Color(0xE1E43C08),),
+                  Icon(Icons.star,color: Color(0xE1E43C08),),
+                  Icon(Icons.star,color: Color(0xE1E43C08),),
+                  Icon(Icons.star,color: Color(0xE1E43C08),),
                   Icon(Icons.star,color:  Colors.grey,),
                   Text('4.5')
                 ],
               ),
             ],
           ),
-           SizedBox(height: 10,),
+           const SizedBox(height: 10,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Designer HandBag',style: TextStyle(fontWeight: FontWeight.bold),),
+              const Text('Designer HandBag',style:  TextStyle(fontWeight: FontWeight.bold),),
               Row(
-                children: [
+                children: const [
                   Text('15'),
                SizedBox(width: 5,),
-               Text('|',style: TextStyle(fontWeight: FontWeight.bold,color:const Color(0xE1E43C08) ),), SizedBox(width: 5,),
+               Text('|',style: TextStyle(fontWeight: FontWeight.bold,color:Color(0xE1E43C08) ),), SizedBox(width: 5,),
               Text('In stock',style: TextStyle(fontWeight: FontWeight.bold),),
                 ],
               ),
             ],
           ),
-           SizedBox(height: 20,),
+           const SizedBox(height: 20,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -62,38 +62,38 @@ class DetailsPage extends StatelessWidget {
               Expanded(
                 child: TextButton(
                   onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => WomenBags()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const WomenBags()));
                   },
-                 child:Text('Product',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),), ),
-              ),SizedBox(width: 10,),
+                 child:const Text('Product',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),), ),
+              ),const SizedBox(width: 10,),
               Expanded(
                 child: TextButton(
                   style: TextButton.styleFrom(backgroundColor:const Color(0xE0E0B5A8) ),
                   onPressed: (){},
-                 child:Text('Details',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),), ),
+                 child:const Text('Details',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),), ),
               ),
               
       
             ],
           ),
-           SizedBox(height: 25,),
-          Text('Brand',style: TextStyle(fontWeight: FontWeight.bold),),
-            SizedBox(height: 5,),
-           Text('Gucci',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
-             SizedBox(height: 15,),
-               Text('Condition',style: TextStyle(fontWeight: FontWeight.bold),),
-            SizedBox(height: 5,),
-            Text('Brand New, With Box',style: TextStyle(fontWeight: FontWeight.bold,fontSize:20)),
-            SizedBox(height: 15,),
-            Text('Category',style: TextStyle(fontWeight: FontWeight.bold),),
-            SizedBox(height: 5,),
-            Text('Women\'s Bag',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+           const SizedBox(height: 25,),
+          const Text('Brand',style: TextStyle(fontWeight: FontWeight.bold),),
+            const SizedBox(height: 5,),
+           const Text('Gucci',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+             const SizedBox(height: 15,),
+               const Text('Condition',style: TextStyle(fontWeight: FontWeight.bold),),
+            const SizedBox(height: 5,),
+            const Text('Brand New, With Box',style: TextStyle(fontWeight: FontWeight.bold,fontSize:20)),
+            const SizedBox(height: 15,),
+            const Text('Category',style:  TextStyle(fontWeight: FontWeight.bold),),
+            const SizedBox(height: 5,),
+            const Text('Women\'s Bag',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
             
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             TextButton(
               style: TextButton.styleFrom(backgroundColor:const Color(0xE1E43C08)),
               onPressed: (){},
-             child: Center(child: Text('Add to Cart',style: TextStyle(color: Colors.white),)))
+             child: const Center(child: Text('Add to Cart',style: TextStyle(color: Colors.white),)))
         ],
         ),
       ),

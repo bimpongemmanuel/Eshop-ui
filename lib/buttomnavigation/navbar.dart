@@ -14,10 +14,10 @@ class MyNav extends StatefulWidget {
 class _MyNavState extends State<MyNav> {
    int _currentIndex = 0;
     List<Widget> myList =[
-      HomeScreen(),
-      CategoryScreen(),
-      SearchPage(),
-      ProfileScreen(),
+      const HomeScreen(),
+      const CategoryScreen(),
+      const SearchPage(),
+      const ProfileScreen(),
     ];
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class _MyNavState extends State<MyNav> {
           _currentIndex = index;
         });
       },
-      items: [
+      items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.category),label: 'Category'),
         BottomNavigationBarItem(icon: Icon(Icons.search),label: 'Cart'),

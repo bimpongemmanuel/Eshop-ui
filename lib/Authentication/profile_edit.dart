@@ -1,8 +1,5 @@
 import 'package:ecommerce_shop/buttomnavigation/navbar.dart';
-import 'package:ecommerce_shop/buttomnavigation/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ProfileEdit extends StatelessWidget {
   const ProfileEdit({Key? key}) : super(key: key);
@@ -11,7 +8,7 @@ class ProfileEdit extends StatelessWidget {
   Widget build(BuildContext context) {
     var outlinedInputBorder = OutlineInputBorder(
       borderRadius: BorderRadius.circular(15),
-      borderSide: BorderSide(color:   Color(0xE1E43C08),)
+      borderSide: const BorderSide(color:   Color(0xE1E43C08),)
     );
     return Scaffold(
       appBar: AppBar(
@@ -19,18 +16,18 @@ class ProfileEdit extends StatelessWidget {
         elevation: 0,
         backgroundColor: const Color(0xE1E43C08),
         leading: IconButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => MyNav()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const MyNav()));
         },
-         icon: Icon(Icons.arrow_back_ios)),
+         icon: const Icon(Icons.arrow_back_ios)),
          title: 
-             Text('Edit Profile'),
+             const Text('Edit Profile'),
       ),
       body:Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             imageProfile(),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
@@ -42,7 +39,7 @@ class ProfileEdit extends StatelessWidget {
                 ),
               ),
             ),
-             SizedBox(height: 10,),
+             const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
@@ -54,7 +51,7 @@ class ProfileEdit extends StatelessWidget {
                 ),
               ),
             ),
-             SizedBox(height: 10,),
+             const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
@@ -67,7 +64,7 @@ class ProfileEdit extends StatelessWidget {
                 ),
               ),
             ),
-             SizedBox(height: 10,),
+             const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
@@ -79,13 +76,13 @@ class ProfileEdit extends StatelessWidget {
                 ),
               ),
             ),
-             SizedBox(height: 15,),
+             const SizedBox(height: 15,),
         Padding(
           padding: const EdgeInsets.all(10.0),
           child: TextButton(
             style: TextButton.styleFrom(backgroundColor:const Color(0xE1E43C08),shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)) ),
             onPressed: (){},
-           child: Center(child: Text('Save',style: TextStyle(color: Colors.white),))),
+           child: const Center(child:  Text('Save',style: TextStyle(color: Colors.white),))),
         ),
           ],
         ),
@@ -100,7 +97,7 @@ class ProfileEdit extends StatelessWidget {
 Widget imageProfile (){
   return Center(
     child: Stack(
-      children: [
+      children: const [
         CircleAvatar(
           radius: 80.0,
           backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/512/149/149071.png'),

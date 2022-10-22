@@ -1,5 +1,4 @@
 import 'package:ecommerce_shop/buttomnavigation/navbar.dart';
-import 'package:ecommerce_shop/buttomnavigation/homepage.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -16,7 +15,6 @@ class _SignupScreenState extends State<SignupScreen> {
     var outlinedInputBorder = OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: const BorderSide(color: Colors.grey));
     
     return Scaffold(
-            backgroundColor:const Color(0xDFF0C0B2) ,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -115,11 +113,11 @@ class _SignupScreenState extends State<SignupScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
-                        CircleAvatar(backgroundColor:  Color(0xDFF0C0B2),backgroundImage: AssetImage('images/google.png'),),
+                        CircleAvatar(backgroundColor:  Colors.white,backgroundImage: AssetImage('images/google.png'),),
                         SizedBox(width: 10,),
-                        CircleAvatar(backgroundColor: Color(0xDFF0C0B2),backgroundImage: AssetImage('images/Facebook.png')),
+                        CircleAvatar(backgroundColor: Colors.white,backgroundImage: AssetImage('images/Facebook.png')),
                         SizedBox(width: 10,),
-                        CircleAvatar(backgroundColor:  Color(0xDFF0C0B2),backgroundImage: AssetImage('images/apple.png')),
+                        CircleAvatar(backgroundColor:  Colors.white,backgroundImage: AssetImage('images/apple.png')),
                       ],
                     )
             ],

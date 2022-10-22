@@ -1,8 +1,6 @@
 import 'package:ecommerce_shop/Details_screens/checkout.dart';
 import 'package:ecommerce_shop/Details_screens/womenbag_details.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class BuyNow extends StatelessWidget {
   const BuyNow({Key? key}) : super(key: key);
@@ -16,7 +14,7 @@ class BuyNow extends StatelessWidget {
       automaticallyImplyLeading: false,
      centerTitle: false,
      leading: IconButton(onPressed: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => WomenBags(),));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const WomenBags(),));
      }, icon: const Icon(Icons.arrow_back_ios,color: Colors.white,)) ,
    
     ),
@@ -43,13 +41,13 @@ class BuyNow extends StatelessWidget {
                               // image: DecorationImage(image: NetworkImage('url'),fit: BoxFit.cover)
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 'GHC 150.99',
                                 style: TextStyle(fontWeight: FontWeight.bold),
@@ -74,32 +72,32 @@ class BuyNow extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.restore_from_trash_outlined,
-                              color: const Color(0xE1E43C08),
+                              color: Color(0xE1E43C08),
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             Text(
                               'Remove',
-                              style: TextStyle(color: const Color(0xE1E43C08)),
+                              style: TextStyle(color: Color(0xE1E43C08)),
                             )
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.remove,
-                              color: const Color(0xE1E43C08),
+                              color: Color(0xE1E43C08),
                             ),
                             SizedBox(
                               width: 10,
@@ -110,13 +108,13 @@ class BuyNow extends StatelessWidget {
                             ),
                             Icon(
                               Icons.add,
-                              color: const Color(0xE1E43C08),
+                              color: Color(0xE1E43C08),
                             )
                           ],
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Padding(
@@ -127,11 +125,11 @@ class BuyNow extends StatelessWidget {
                               style: TextButton.styleFrom(
                                   backgroundColor: const Color(0xE1E43C08)),
                               onPressed: () {},
-                              child: Icon(
+                              child: const Icon(
                                 Icons.call,
                                 color: Colors.white,
                               )),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Expanded(
@@ -139,9 +137,9 @@ class BuyNow extends StatelessWidget {
                                 style: TextButton.styleFrom(
                                     backgroundColor: const Color(0xE1E43C08)),
                                 onPressed: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => CheckOut(),));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const CheckOut(),));
                                 },
-                                child: Center(
+                                child: const Center(
                                     child: Text('Checkout',
                                         style: TextStyle(
                                           color: Colors.white,

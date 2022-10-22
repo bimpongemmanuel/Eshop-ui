@@ -1,9 +1,6 @@
 import 'package:ecommerce_shop/Details_screens/details2.dart';
 import 'package:ecommerce_shop/Details_screens/payment_sucessful.dart';
-import 'package:ecommerce_shop/Details_screens/womenbag_details.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CheckOut extends StatelessWidget {
   const CheckOut({Key? key}) : super(key: key);
@@ -17,9 +14,9 @@ class CheckOut extends StatelessWidget {
         leading: IconButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => DetailsPage()));
+                  MaterialPageRoute(builder: (context) => const DetailsPage()));
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios,
               color: Colors.white,
             )),
@@ -48,13 +45,13 @@ class CheckOut extends StatelessWidget {
                               // image: DecorationImage(image: NetworkImage('url'),fit: BoxFit.cover)
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 'GHC 150.99',
                                 style: TextStyle(fontWeight: FontWeight.bold),
@@ -79,32 +76,32 @@ class CheckOut extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.restore_from_trash_outlined,
-                              color: const Color(0xE1E43C08),
+                              color: Color(0xE1E43C08),
                             ),
                             SizedBox(
                               width: 10,
                             ),
                             Text(
                               'Remove',
-                              style: TextStyle(color: const Color(0xE1E43C08)),
+                              style: TextStyle(color: Color(0xE1E43C08)),
                             )
                           ],
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.remove,
-                              color: const Color(0xE1E43C08),
+                              color: Color(0xE1E43C08),
                             ),
                             SizedBox(
                               width: 10,
@@ -115,40 +112,40 @@ class CheckOut extends StatelessWidget {
                             ),
                             Icon(
                               Icons.add,
-                              color: const Color(0xE1E43C08),
+                              color: Color(0xE1E43C08),
                             )
                           ],
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [Text('Subtotal'), Text('GHC 150.99')],
+                      children: const [Text('Subtotal'), Text('GHC 150.99')],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [Text('Delivery Fee'), Text('GHC 25.99')],
+                      children: const [Text('Delivery Fee'), Text('GHC 25.99')],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [Text('Total'), Text('GHC 225.09')],
+                      children: const [ Text('Total'), Text('GHC 225.09')],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text('Select Payment Method'),
                         SizedBox(
                           height: 10,
@@ -160,7 +157,7 @@ class CheckOut extends StatelessWidget {
                         Text('Pay Via Momo'),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Padding(
@@ -169,9 +166,9 @@ class CheckOut extends StatelessWidget {
                           style: TextButton.styleFrom(
                               backgroundColor: const Color(0xE1E43C08)),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentMade(),));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const PaymentMade(),));
                           },
-                          child: Center(
+                          child: const Center(
                               child: Text('Confrim Payment',
                                   style: TextStyle(
                                     color: Colors.white,

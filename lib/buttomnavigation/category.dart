@@ -1,13 +1,10 @@
 import 'package:ecommerce_shop/commons/list_api.dart';
-import 'package:ecommerce_shop/model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CategoryScreen extends StatelessWidget {
- CategoryScreen({Key? key,this.allProducts}) : super(key: key);
+ const CategoryScreen({Key? key}) : super(key: key);
 
-    EShopModel? allProducts;
+    // EShopModel? allProducts;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +26,7 @@ class CategoryScreen extends StatelessWidget {
         Expanded(
           child: GridView.builder(
              itemCount:homeCard.length, 
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
           itemBuilder: (context, index) {
             return
           SizedBox(
@@ -47,10 +44,10 @@ class CategoryScreen extends StatelessWidget {
                       image: DecorationImage(image: NetworkImage(homeCard[index]['img']),fit: BoxFit.cover),
                       ),
                     ),
-                    SizedBox(height: 10,),
+                    const SizedBox(height: 10,),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(homeCard[index]['descrition'],style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
+                      child: Text(homeCard[index]['descrition'],style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
                     )
                 ]),
               ),
