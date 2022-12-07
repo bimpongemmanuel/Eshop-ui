@@ -7,12 +7,7 @@ class LogInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var outlinedInputBorder = OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(color: Colors.grey));
-
     return Scaffold(
-      // backgroundColor: const Color(0xDFF0C0B2),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -23,7 +18,6 @@ class LogInPage extends StatelessWidget {
               const Text(
                 'Login',
                 style: TextStyle(
-                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 25),
               ),
@@ -33,14 +27,12 @@ class LogInPage extends StatelessWidget {
               TextField(
                 cursorColor: Colors.grey,
                 decoration: InputDecoration(
-                  labelText: 'Email',
-                  labelStyle: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
                   hintText: 'Enter your email',
-                  border: outlinedInputBorder,
-                  focusedBorder: outlinedInputBorder,
+                   focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
+                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  focusColor: Colors.grey
                 ),
               ),
               const SizedBox(
@@ -50,14 +42,11 @@ class LogInPage extends StatelessWidget {
                 obscureText: true,
                 cursorColor: Colors.grey,
                 decoration: InputDecoration(
-                  labelText: 'Password',
-                  labelStyle: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
                   hintText: '.............',
-                  border: outlinedInputBorder,
-                  focusedBorder: outlinedInputBorder,
+                   focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
+                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               ),
               const SizedBox(

@@ -1,5 +1,5 @@
 import 'package:ecommerce_shop/Details_screens/checkout.dart';
-import 'package:ecommerce_shop/Details_screens/womenbag_details.dart';
+import 'package:ecommerce_shop/Details_screens/details_page.dart';
 import 'package:flutter/material.dart';
 
 class BuyNow extends StatelessWidget {
@@ -10,11 +10,10 @@ class BuyNow extends StatelessWidget {
     return Scaffold(
         appBar:  AppBar(
       elevation: 0.0,
-      backgroundColor: const Color(0xE1E43C08),
       automaticallyImplyLeading: false,
      centerTitle: false,
      leading: IconButton(onPressed: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const WomenBags(),));
+      Navigator.pop(context);
      }, icon: const Icon(Icons.arrow_back_ios,color: Colors.white,)) ,
    
     ),

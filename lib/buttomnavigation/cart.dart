@@ -1,12 +1,10 @@
-import 'package:ecommerce_shop/Details_screens/details_page.dart';
-import 'package:ecommerce_shop/buttomnavigation/search.dart';
 import 'package:ecommerce_shop/commons/list_api.dart';
 import 'package:ecommerce_shop/provider_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class AddToCart extends StatelessWidget {
-  const AddToCart({Key? key}) : super(key: key);
+class MyCartPage extends StatelessWidget {
+  const MyCartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,17 +14,10 @@ class AddToCart extends StatelessWidget {
       elevation: 0.0,
       automaticallyImplyLeading: false,
      title: const Text('Cart List',style:  TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30),),
-     leading: IconButton(onPressed: (){
-       Navigator.pop(context);
-     }, icon: const Icon(Icons.arrow_back_ios,color: Colors.white,)) ,
-     actions: [
-      IconButton(onPressed: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchPage(),));
-      }, icon: const Icon(Icons.search,color: Colors.white,)),
-      
-     ],
+     centerTitle: false,
+     
     ),
-    body: ListView.builder(
+     body: ListView.builder(
       itemCount: product.cartmodel.length, 
       itemBuilder: (context, index)=>
       Padding(

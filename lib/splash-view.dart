@@ -19,7 +19,6 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: textColor(),
       body:const Center(child: Text('MShop',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.white),),)
     );
   }

@@ -49,7 +49,6 @@ class OnboardingPage extends StatelessWidget {
   PageDecoration getPageDecration() => const PageDecoration(
     titleTextStyle: TextStyle(fontSize: 28,fontWeight: FontWeight.bold),
     imagePadding:  EdgeInsets.all(24),
-    // pageColor: const Color(0xDFF0C0B2),
   );
 
   DotsDecorator getDotsDecoration() => DotsDecorator(

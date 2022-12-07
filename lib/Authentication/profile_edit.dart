@@ -6,17 +6,12 @@ class ProfileEdit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var outlinedInputBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
-      borderSide: const BorderSide(color:   Color(0xE1E43C08),)
-    );
     return Scaffold(
       appBar: AppBar(
         // centerTitle: false,
         elevation: 0,
-        backgroundColor: const Color(0xE1E43C08),
         leading: IconButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => const MyNav()));
+          Navigator.pop(context);
         },
          icon: const Icon(Icons.arrow_back_ios)),
          title: 
@@ -31,10 +26,13 @@ class ProfileEdit extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-                cursorColor: Colors.white,
+                cursorColor: Colors.orange,
                 decoration: InputDecoration(
-                  focusedBorder: outlinedInputBorder,
-                  border: outlinedInputBorder,
+                  focusColor: Colors.orange,
+                  focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   hintText: 'FullName',
                 ),
               ),
@@ -45,8 +43,11 @@ class ProfileEdit extends StatelessWidget {
               child: TextField(
                 cursorColor: Colors.white,
                 decoration: InputDecoration(
-                  focusedBorder: outlinedInputBorder,
-                  border: outlinedInputBorder,
+                  focusColor: Colors.orange,
+                  focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
+                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   hintText: 'Email',
                 ),
               ),
@@ -58,8 +59,11 @@ class ProfileEdit extends StatelessWidget {
                 obscureText: true,
                 cursorColor: Colors.white,
                 decoration: InputDecoration(
-                  focusedBorder: outlinedInputBorder,
-                  border: outlinedInputBorder,
+                 focusColor: Colors.orange,
+                  focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
+                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   hintText: 'Password',
                 ),
               ),
@@ -70,9 +74,12 @@ class ProfileEdit extends StatelessWidget {
               child: TextField(
                 cursorColor: Colors.white,
                 decoration: InputDecoration(
-                  focusedBorder: outlinedInputBorder,
-                  border: outlinedInputBorder,
-                  hintText: 'Phone',
+                 focusColor: Colors.orange,
+                  focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
+                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  hintText: '+233 550 275 934',
                 ),
               ),
             ),

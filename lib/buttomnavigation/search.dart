@@ -10,7 +10,6 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
        appBar:  AppBar(
       elevation: 0.0,
-      backgroundColor: const Color(0xE1E43C08),
       automaticallyImplyLeading: false,
      title:const Padding(
        padding:  EdgeInsets.fromLTRB(10,10,10,0),
@@ -25,52 +24,19 @@ class SearchPage extends StatelessWidget {
        ),
      ),
      centerTitle: false,
-     leading: IconButton(onPressed: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const MyNav()));
-     }, icon: const Icon(Icons.arrow_back_ios,color: Colors.white,)) ,
      actions: [
       IconButton(onPressed: (){}, icon: const Icon(Icons.bookmark_border_outlined,color: Colors.white,)),
      ],
     ),
-    body: Column(
-      children: [
-        Expanded(
-          child: GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
-          itemCount:homeCard.length ,
-          itemBuilder: (context, index) {
-            return SizedBox(
-        height: 190,
-        width: 150,
+    body:ListView.builder(itemBuilder: (context, index) {
+      return SizedBox(
+        height: 120,
+        width: MediaQuery.of(context).size.width,
         child: Card(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-           Container(
-            height: 120,
-            decoration:BoxDecoration(
-              image:DecorationImage(image: NetworkImage(homeCard[index]['img']),fit: BoxFit.cover)
-            )
-           ),
-           const SizedBox(height: 10,), 
-           Padding(
-             padding: const EdgeInsets.all(5.0),
-             child: Text(homeCard[index]['descrition'],style: const TextStyle(fontWeight: FontWeight.bold)),
-           ),
-           const SizedBox(height: 5,),
-           Padding(
-             padding: const EdgeInsets.all(5.0),
-             child: Text(homeCard[index]['price'],style: const TextStyle(fontWeight: FontWeight.bold)),
-           ),
-
-          ]),
-          // color: Colors.amber,
+          
         ),
       );
-          },),
-        )
-        
-    ]),
+    },),
     );
   }
 }

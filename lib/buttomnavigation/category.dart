@@ -1,3 +1,5 @@
+import 'package:ecommerce_shop/Details_screens/category_details.dart';
+import 'package:ecommerce_shop/commons/cat_list.dart';
 import 'package:ecommerce_shop/commons/list_api.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +13,9 @@ class CategoryScreen extends StatelessWidget {
     return Scaffold(
       appBar:  AppBar(
       elevation: 0.0,
-      backgroundColor: const Color(0xE1E43C08),
       automaticallyImplyLeading: false,
-     title: const Text('MShop',style:  TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30),),
+     title: const Text('Category',style:  TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30),),
      centerTitle: false,
-     leading: IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_back_ios,color: Colors.white,)) ,
      actions: [
       IconButton(onPressed: (){}, icon: const Icon(Icons.search,color: Colors.white,)),
       IconButton(onPressed: (){}, icon: const Icon(Icons.bookmark_border_outlined,color: Colors.white,)),
@@ -47,12 +47,17 @@ class CategoryScreen extends StatelessWidget {
                     const SizedBox(height: 10,),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(homeCard[index]['descrition'],style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
+                      child: Text(homeCard[index]['name'],style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
                     )
                 ]),
               ),
-              
-            ));
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CatDetails(
+                  categoryDetails:catList[index] ,
+                ),));
+              },
+            ),
+            );
           },),
         )
       ],

@@ -9,17 +9,8 @@ class CheckOut extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xE1E43C08),
         elevation: 0,
-        leading: IconButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const DetailsPage()));
-            },
-            icon: const Icon(
-              Icons.arrow_back_ios,
-              color: Colors.white,
-            )),
+       leading: IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.arrow_back_ios   )),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,6 +22,8 @@ class CheckOut extends StatelessWidget {
               child: Card(
                 // color: Colors.amber,
                 child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+                  
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -173,7 +166,7 @@ class CheckOut extends StatelessWidget {
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
-                                  )))),
+                                  ),),),),
                     ),
                   ],
                 ),

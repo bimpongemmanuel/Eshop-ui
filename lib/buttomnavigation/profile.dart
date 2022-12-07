@@ -1,28 +1,30 @@
 import 'package:ecommerce_shop/Authentication/login_screen.dart';
 import 'package:ecommerce_shop/Authentication/profile_edit.dart';
+import 'package:ecommerce_shop/provider_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final colorTheme = Provider.of<Cartprovider>(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
         centerTitle: false,
-        backgroundColor: const Color(0xE1E43C08),
         leading:const Padding(
-          padding: EdgeInsets.all(8.0),
-          child: CircleAvatar(backgroundColor: Colors.white,),
+          padding: EdgeInsets.all(5.0),
+          child: CircleAvatar(backgroundColor: Colors.white,radius: 60,),
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: const [
-            Text('sddsfd'),
-            Text('shshjjt'),
+            Text('Bimpong Emmanuel'),
+            Text('bimponge38@gmail.com'),
           ],
         ),
         actions: [
@@ -33,69 +35,138 @@ class ProfileScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
-            Row(
-              children: const [
-                Icon(Icons.payment,color:Color(0xE1E43C08) ,),
-                SizedBox(width: 10,),
-                Text('Payment Method'),
-                SizedBox(height: 20,)
-              ],
+            SizedBox(
+              height: 50,
+              width: MediaQuery.of(context).size.width,
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: const [
+                      Icon(Icons.payment,color:Color(0xE1E43C08) ,),
+                      SizedBox(width: 10,),
+                      Text('Payment Method'),
+                      SizedBox(height: 20,)
+                    ],
+                  ),
+                ),
+              ),
             ),
             const SizedBox(height: 30,),
-            Row(
-              children: const [
-                Icon(Icons.menu,color:Color(0xE1E43C08) ,),
-                SizedBox(width: 10,),
-                Text('Order History'),
-                SizedBox(height: 30,)
-              ],
+            SizedBox(
+              height: 50,
+              width: MediaQuery.of(context).size.width,
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: const [
+                      Icon(Icons.menu,color:Color(0xE1E43C08) ,),
+                      SizedBox(width: 10,),
+                      Text('Order History'),
+                      SizedBox(height: 30,)
+                    ],
+                  ),
+                ),
+              ),
             ),
             const SizedBox(height: 30,),
-             Row(
-              children: const [
-                Icon(Icons.delivery_dining_sharp,color:Color(0xE1E43C08) ,),
-                SizedBox(width: 10,),
-                Text('Delivery Status'),
-                SizedBox(height: 30,)
-              ],
-            ),
+             SizedBox(
+              height: 50,
+              width: MediaQuery.of(context).size.width,
+               child: Card(
+                 child: Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Row(
+                    children: const [
+                      Icon(Icons.delivery_dining_sharp,color:Color(0xE1E43C08) ,),
+                      SizedBox(width: 10,),
+                      Text('Delivery Status'),
+                      SizedBox(height: 30,)
+                    ],
+                             ),
+                 ),
+               ),
+             ),
             const SizedBox(height: 30,),
-             Row(
-              children: const [
-                Icon(Icons.language,color:Color(0xE1E43C08) ,),
-                SizedBox(width: 10,),
-                Text('Language'),
-              ],
-            ),
+             SizedBox(
+              height: 50,
+              width: MediaQuery.of(context).size.width,
+               child: Card(
+                 child: Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Row(
+                    children: const [
+                      Icon(Icons.language,color:Color(0xE1E43C08) ,),
+                      SizedBox(width: 10,),
+                      Text('Language'),
+                    ],
+                    ),
+                 ),
+               ),
+             ),
+            
             const SizedBox(height: 30,),
-             Row(
-              children: const [
-                Icon(Icons.favorite,color:Color(0xE1E43C08) ,),
-                SizedBox(width: 10,),
-                Text('Favorite'),
-                SizedBox(height: 30,)
-              ],
-            ),
-            const SizedBox(height: 30,),
-             Row(
-              children: const [
-                Icon(Icons.lock,color:Color(0xE1E43C08) ,),
-                SizedBox(width: 10,),
-                Text('Privacy Policy'),
-                SizedBox(height: 30,)
-              ],
-            ),
-            const SizedBox(height: 30,),
-            Row(
-              children: const [
-                Icon(Icons.star,color:Color(0xE1E43C08) ,),
-                SizedBox(width: 10,),
-                Text('Rate'),
-                SizedBox(height: 30,)
-              ],
+             SizedBox(
+              height: 50,
+              width: MediaQuery.of(context).size.width,
+               child: Card(
+                 child: Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Row(
+                    children: const [
+                      Icon(Icons.lock,color:Color(0xE1E43C08) ,),
+                      SizedBox(width: 10,),
+                      Text('Privacy Policy'),
+                      SizedBox(height: 30,)
+                    ],
+                    ),
+                 ),
+               ),
+             ),
+           
+              const SizedBox(height: 30,),
+            GestureDetector(
+              child: SizedBox(
+                height: 50,
+                width: MediaQuery.of(context).size.width,
+                child: Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: const [
+                        Icon(Icons.star,color:Color(0xE1E43C08) ,),
+                        SizedBox(width: 10,),
+                        Text('Change Theme'),
+                        SizedBox(height: 30,)
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              onTap: (){
+                showBottomSheet(context: context, builder: (context) => SizedBox(
+                  height: 100,
+                  width: MediaQuery.of(context).size.width,
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Text('Dark Mode',style: TextStyle(fontSize: 20),),
+                          SizedBox(width: 20,),
+                          Switch.adaptive(value: colorTheme.isDarkModeClick, onChanged: (value) {
+                            Navigator.pop(context);
+                             colorTheme.setTheme(value);},)
+                        ],
+                      ),
+                    ),
+                  ),
+                ),);
+              },
             ),
             const SizedBox(height: 30,),
            Padding(
@@ -103,7 +174,22 @@ class ProfileScreen extends StatelessWidget {
              child: TextButton(
               style: TextButton.styleFrom(backgroundColor:const Color(0xE1E43C08), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
               onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const LogInPage()));
+                showDialog(context: context, builder: (context) {
+                  return AlertDialog(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    title: Text('Log out'),
+                    content: Text('Are you sure you want to log out'),
+                    actions: [
+                      TextButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => LogInPage(),));
+                      },
+                       child: Text('Yes',style: TextStyle(color: Colors.orange),)),
+                       TextButton(onPressed: (){
+                        Navigator.pop(context);
+                       }, child: Text('No'))
+                    ],
+                  );
+                },);
               },
               child: const Center(child: Text('Log out',style: TextStyle(color: Colors.white),))),
            )

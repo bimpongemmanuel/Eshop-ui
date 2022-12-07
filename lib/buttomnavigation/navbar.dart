@@ -1,3 +1,4 @@
+import 'package:ecommerce_shop/buttomnavigation/cart.dart';
 import 'package:ecommerce_shop/buttomnavigation/category.dart';
 import 'package:ecommerce_shop/buttomnavigation/search.dart';
 import 'package:ecommerce_shop/buttomnavigation/homepage.dart';
@@ -15,8 +16,9 @@ class _MyNavState extends State<MyNav> {
    int _currentIndex = 0;
     List<Widget> myList =[
       const HomeScreen(),
+      const MyCartPage(),
       const CategoryScreen(),
-      const SearchPage(),
+      // const SearchPage(),
       const ProfileScreen(),
     ];
   @override
@@ -27,9 +29,7 @@ class _MyNavState extends State<MyNav> {
         children:myList,
       ),
      bottomNavigationBar: BottomNavigationBar(
-      backgroundColor:  const Color(0xE1E43C08),
       type: BottomNavigationBarType.fixed,
-      selectedItemColor:  Colors.black,
       unselectedItemColor:  Colors.white,
       showUnselectedLabels: false,
       currentIndex: _currentIndex,
@@ -39,10 +39,11 @@ class _MyNavState extends State<MyNav> {
           _currentIndex = index;
         });
       },
-      items: const [
+      items: const [  
         BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),label: 'Cart'),
         BottomNavigationBarItem(icon: Icon(Icons.category),label: 'Category'),
-        BottomNavigationBarItem(icon: Icon(Icons.search),label: 'Cart'),
+        // BottomNavigationBarItem(icon: Icon(Icons.search),label: 'Cart'), 
         BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profile'),
       ]),
     );

@@ -11,9 +11,7 @@ class SignupScreen extends StatefulWidget {
 class _SignupScreenState extends State<SignupScreen> {
    bool value = false;
   @override
-  Widget build(BuildContext context) {
-    var outlinedInputBorder = OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: const BorderSide(color: Colors.grey));
-    
+  Widget build(BuildContext context) {   
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -22,28 +20,27 @@ class _SignupScreenState extends State<SignupScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment:CrossAxisAlignment.center,
             children: [
-              const Text('Signup',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 25),),
+              const Text('Signup',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
                 const SizedBox(height: 20,),
               TextField(
                  cursorColor: Colors.grey,
                 decoration: InputDecoration(
-                  labelText: 'Email',
-                  labelStyle: const TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
-                  hintText: 'Enter your email', 
-                  border: outlinedInputBorder,
-                  focusedBorder: outlinedInputBorder,
+                  focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
+                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  hintText: 'Enter your email',     
                 ),
               ),
               const SizedBox(height: 15,),
                TextField(
                 cursorColor: Colors.grey,
                 decoration: InputDecoration(
-                  labelText: 'Name',
-                  labelStyle: const TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
                   hintText: 'Enter your full name', 
-                  border: outlinedInputBorder,
-                  focusedBorder: outlinedInputBorder,
-                  
+                 focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
+                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               ),
               const SizedBox(height: 15,),
@@ -51,11 +48,11 @@ class _SignupScreenState extends State<SignupScreen> {
                  cursorColor: Colors.grey,
                 obscureText: true,
                 decoration: InputDecoration(
-                  labelText: 'Password',
-                  labelStyle: const TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
                   hintText: '.............',
-                  border: outlinedInputBorder,
-                  focusedBorder: outlinedInputBorder,
+                  focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
+                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               ),
                const SizedBox(height: 10,),
