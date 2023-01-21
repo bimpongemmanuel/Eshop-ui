@@ -1,6 +1,5 @@
 import 'package:ecommerce_shop/Details_screens/addto_cart.dart';
 import 'package:ecommerce_shop/Details_screens/buy_now.dart';
-import 'package:ecommerce_shop/Details_screens/details2.dart';
 import 'package:ecommerce_shop/buttomnavigation/navbar.dart';
 import 'package:ecommerce_shop/commons/list_api.dart';
 import 'package:ecommerce_shop/provider_controller.dart';
@@ -85,14 +84,25 @@ class DetailsPage extends StatelessWidget {
                 ],
               ),
             
-            const SizedBox(height: 20,),
+            const SizedBox(height: 10,),
+             Row(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                Icon(Icons.star,color: Colors.yellow,),
+                                SizedBox(width: 10,),
+                                Text(productDetails['rate'])
+                                ],),
+             const SizedBox(height: 10,),
             Row(
               children: [
                 Expanded(
                   child: TextButton(
                     style: TextButton.styleFrom(backgroundColor:const Color(0xE1E43C08)),
                     onPressed: () => product.addToCart({
-                      'title':'womanbag',
+                      'name':productDetails['name'],
+                      'price':productDetails['price'],
+                      'img':productDetails['img']
 
                     }),
                    child: const Text('Add to Cart',style: TextStyle(color: Colors.white),)),

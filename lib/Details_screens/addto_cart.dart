@@ -20,9 +20,7 @@ class AddToCart extends StatelessWidget {
        Navigator.pop(context);
      }, icon: const Icon(Icons.arrow_back_ios,color: Colors.white,)) ,
      actions: [
-      IconButton(onPressed: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchPage(),));
-      }, icon: const Icon(Icons.search,color: Colors.white,)),
+      IconButton(onPressed: (){}, icon: const Icon(Icons.search,color: Colors.white,)),
       
      ],
     ),
@@ -42,7 +40,7 @@ class AddToCart extends StatelessWidget {
                   height: 150,
                   width: 140,
                   decoration: BoxDecoration(
-                    image: DecorationImage(image: NetworkImage(homeCard[index]['img']),fit: BoxFit.fill)
+                    image: DecorationImage(image: NetworkImage(product.cartmodel[index]['img']),fit: BoxFit.fill)
                   ),
                 ),
                 SizedBox(width: 10,),
@@ -51,9 +49,9 @@ class AddToCart extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(homeCard[index]['name'],style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20)),
+                      Text(product.cartmodel[index]['name'],style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20)),
                       SizedBox(height: 15,),
-                      Text(homeCard[index]['price'],style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15)),
+                      Text(product.cartmodel[index]['price'],style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15)),
                       
                     ],
                   ),

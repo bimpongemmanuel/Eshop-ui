@@ -1,9 +1,7 @@
 import 'package:ecommerce_shop/Details_screens/details_page.dart';
-import 'package:ecommerce_shop/commons/home_card.dart';
 import 'package:ecommerce_shop/commons/list2.dart';
 import 'package:ecommerce_shop/commons/carousel_slider.dart';
 import 'package:ecommerce_shop/commons/list_api.dart';
-import 'package:ecommerce_shop/commons/mysearch.dart';
 import 'package:ecommerce_shop/provider_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -17,6 +15,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+    int? isHeartButtonClick;    
   //  final AllProductNetwork _allProductNetwork = AllProductNetwork();
 
   // Future<List<EShopModel>>? getProduct;
@@ -28,7 +27,6 @@ class _HomeScreenState extends State<HomeScreen> {
   // }
   @override
   Widget build(BuildContext context) {
-    final icon = Provider.of<Cartprovider>(context);
     return Scaffold(
         appBar: homeAppBar(),
         body: SingleChildScrollView(
@@ -39,9 +37,16 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 10,
               ),
+              // Text('Top Product'),
+              // SizedBox(
+              //   height: 120,
+              //   width: 120,
+              //   child: Card(),
+              // ),
               GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2),
+                gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,childAspectRatio: MediaQuery.of(context).size.width /
+            (MediaQuery.of(context).size.height/1.5)),
                 itemCount: homeCard.length,
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
@@ -61,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                  
                                   Container(
-                                    height: 130,
+                                    height: 160,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10)),
                                       image: DecorationImage(
@@ -74,14 +79,29 @@ class _HomeScreenState extends State<HomeScreen> {
                                     top: 0.0,
                                     child: 
                                         IconButton(onPressed: (){
-                                        
-                                        }, icon: Icon(MdiIcons.heartOutline,color:Colors.red)),
+                                          setState(() {
+                                           isHeartButtonClick=index;
+                                          });
+                                        }, 
+                                        icon: isHeartButtonClick==index ?  Icon(MdiIcons.heart) : Icon(MdiIcons.heartOutline),
+                                        color: isHeartButtonClick==index ? Colors.red : Colors.orange,
+                                        ),
                                   ),
                                 ],
                               ),
+                              SizedBox(height: 10),
                               Text(homeCard[index]['name'],style: TextStyle(fontSize: 20),),
                               SizedBox(height: 5,),
                               Text(homeCard[index]['price']),
+                              SizedBox(height: 10),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                Icon(Icons.star,color: Colors.yellow,),
+                                SizedBox(width: 10,),
+                                Text(homeCard[index]['rate'])
+                                ],)
                             ],
                           ),
                         ),
@@ -96,10 +116,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   );
                 },
-              )
+              ),
             ],
           ),
-        ));
+        )
+        );
   }
 
   AppBar homeAppBar() {
@@ -114,12 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
       centerTitle: false,
       actions: [
         IconButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const MySearch()),
-              );
-            },
+            onPressed: () {},
             icon: const Icon(
               Icons.search,
               color: Colors.white,

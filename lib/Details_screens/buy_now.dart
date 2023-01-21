@@ -1,22 +1,20 @@
 import 'package:ecommerce_shop/Details_screens/checkout.dart';
 import 'package:ecommerce_shop/Details_screens/details_page.dart';
+import 'package:ecommerce_shop/commons/app_bar.dart';
+import 'package:ecommerce_shop/commons/list_api.dart';
+import 'package:ecommerce_shop/provider_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class BuyNow extends StatelessWidget {
-  const BuyNow({Key? key}) : super(key: key);
+  const BuyNow({Key? key,this.productDetails}) : super(key: key);
+  final productDetails;
 
   @override
   Widget build(BuildContext context) {
+    final product = Provider.of<Cartprovider>(context);
     return Scaffold(
-        appBar:  AppBar(
-      elevation: 0.0,
-      automaticallyImplyLeading: false,
-     centerTitle: false,
-     leading: IconButton(onPressed: (){
-      Navigator.pop(context);
-     }, icon: const Icon(Icons.arrow_back_ios,color: Colors.white,)) ,
-   
-    ),
+        appBar:  eShopAppBar(context),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,  
         children: [
@@ -24,7 +22,6 @@ class BuyNow extends StatelessWidget {
               height: MediaQuery.of(context).size.height / 3,
               width: MediaQuery.of(context).size.width,
               child: Card(
-                // color: Colors.amber,
                 child: Column(
                   children: [
                     Padding(
@@ -37,7 +34,7 @@ class BuyNow extends StatelessWidget {
                             decoration: BoxDecoration(
                               color: Colors.blueAccent,
                               borderRadius: BorderRadius.circular(10),
-                              // image: DecorationImage(image: NetworkImage('url'),fit: BoxFit.cover)
+                              // image: DecorationImage(image: NetworkImage(productDetails['img']),fit: BoxFit.cover)
                             ),
                           ),
                           const SizedBox(
@@ -155,4 +152,6 @@ class BuyNow extends StatelessWidget {
       ),
     );
   }
+
+  
 }

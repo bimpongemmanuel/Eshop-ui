@@ -1,5 +1,4 @@
-import 'package:ecommerce_shop/Details_screens/category_details.dart';
-import 'package:ecommerce_shop/commons/cat_list.dart';
+import 'package:ecommerce_shop/buttomnavigation/search.dart';
 import 'package:ecommerce_shop/commons/list_api.dart';
 import 'package:flutter/material.dart';
 
@@ -51,11 +50,7 @@ class CategoryScreen extends StatelessWidget {
                     )
                 ]),
               ),
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => CatDetails(
-                  categoryDetails:catList[index] ,
-                ),));
-              },
+              onTap: (){},
             ),
             );
           },),

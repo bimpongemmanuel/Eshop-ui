@@ -49,13 +49,12 @@ class ProfileScreen extends StatelessWidget {
                       Icon(Icons.payment,color:Color(0xE1E43C08) ,),
                       SizedBox(width: 10,),
                       Text('Payment Method'),
-                      SizedBox(height: 20,)
                     ],
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 30,),
+            const SizedBox(height: 20,),
             SizedBox(
               height: 50,
               width: MediaQuery.of(context).size.width,
@@ -67,13 +66,12 @@ class ProfileScreen extends StatelessWidget {
                       Icon(Icons.menu,color:Color(0xE1E43C08) ,),
                       SizedBox(width: 10,),
                       Text('Order History'),
-                      SizedBox(height: 30,)
                     ],
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 30,),
+            const SizedBox(height: 20,),
              SizedBox(
               height: 50,
               width: MediaQuery.of(context).size.width,
@@ -85,13 +83,12 @@ class ProfileScreen extends StatelessWidget {
                       Icon(Icons.delivery_dining_sharp,color:Color(0xE1E43C08) ,),
                       SizedBox(width: 10,),
                       Text('Delivery Status'),
-                      SizedBox(height: 30,)
                     ],
                              ),
                  ),
                ),
              ),
-            const SizedBox(height: 30,),
+            const SizedBox(height: 20,),
              SizedBox(
               height: 50,
               width: MediaQuery.of(context).size.width,
@@ -109,7 +106,7 @@ class ProfileScreen extends StatelessWidget {
                ),
              ),
             
-            const SizedBox(height: 30,),
+            const SizedBox(height: 20,),
              SizedBox(
               height: 50,
               width: MediaQuery.of(context).size.width,
@@ -121,14 +118,13 @@ class ProfileScreen extends StatelessWidget {
                       Icon(Icons.lock,color:Color(0xE1E43C08) ,),
                       SizedBox(width: 10,),
                       Text('Privacy Policy'),
-                      SizedBox(height: 30,)
                     ],
                     ),
                  ),
                ),
              ),
            
-              const SizedBox(height: 30,),
+              const SizedBox(height: 20,),
             GestureDetector(
               child: SizedBox(
                 height: 50,
@@ -141,7 +137,6 @@ class ProfileScreen extends StatelessWidget {
                         Icon(Icons.star,color:Color(0xE1E43C08) ,),
                         SizedBox(width: 10,),
                         Text('Change Theme'),
-                        SizedBox(height: 30,)
                       ],
                     ),
                   ),

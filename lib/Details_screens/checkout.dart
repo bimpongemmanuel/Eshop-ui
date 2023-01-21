@@ -1,4 +1,3 @@
-import 'package:ecommerce_shop/Details_screens/details2.dart';
 import 'package:ecommerce_shop/Details_screens/payment_sucessful.dart';
 import 'package:flutter/material.dart';
 

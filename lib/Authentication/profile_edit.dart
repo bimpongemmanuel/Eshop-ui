@@ -1,11 +1,15 @@
 import 'package:ecommerce_shop/buttomnavigation/navbar.dart';
+import 'package:ecommerce_shop/commons/colors.dart';
+import 'package:ecommerce_shop/provider_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ProfileEdit extends StatelessWidget {
   const ProfileEdit({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final colorTheme = Provider.of<Cartprovider>(context);
     return Scaffold(
       appBar: AppBar(
         // centerTitle: false,
@@ -32,6 +36,7 @@ class ProfileEdit extends StatelessWidget {
                   focusedBorder:OutlineInputBorder(borderSide: BorderSide(color: Colors.orange),borderRadius: BorderRadius.circular(15)) ,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color:colorTheme.isDarkModeClick ? AppColor.grey  : AppColor.orange),
                   ),
                   hintText: 'FullName',
                 ),
